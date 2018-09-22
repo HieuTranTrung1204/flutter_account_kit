@@ -189,7 +189,8 @@ public class FlutterAccountKitPlugin implements MethodCallHandler {
       String initialPhoneCountryPrefix = (String) this.options.get("initialPhoneCountryPrefix");
       String initialPhoneNumber = (String) this.options.get("initialPhoneNumber");
 
-      PhoneNumber phoneNumber = new PhoneNumber(initialPhoneCountryPrefix, initialPhoneNumber, null);
+      // TODO Hieu hardcode cheat
+      PhoneNumber phoneNumber = new PhoneNumber("+84", initialPhoneNumber, "VN");
       configurationBuilder.setInitialPhoneNumber(phoneNumber);
 
       configurationBuilder.setFacebookNotificationsEnabled(
